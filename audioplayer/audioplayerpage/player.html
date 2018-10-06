@@ -7,7 +7,6 @@
 
     <!-- Include font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <!--
             Include Resource Javascript
 
@@ -24,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="css/app.css"/>
   </head>
   <body>
-    <div class="grid-x">
+    <div class="grid-x" id = "mainbody">
       <div class="large-6 medium-6 small-12 large-centered medium-centered cell">
 
 
@@ -79,7 +78,7 @@
               <div class="large-12 medium-12 small-12 cell">
                 <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
                 <div class="amplitude-prev" id="previous"></div>
-                <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+                <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause" onclick="checkTime(event)"></div>
                 <div class="amplitude-next" id="next"></div>
                 <div class="amplitude-repeat" id="repeat"></div>
               </div>
@@ -172,19 +171,94 @@
       </div>
 
     </div>
-  </body>
-  <script type="text/javascript">
-    Amplitude.init({
-      "songs": [
-        {
-          "name": "The Read: Journey to Entreprenuership",
-          "artist": "Ben and Jeevan",
-          "album": "We Are to Answer",
-          "url": "./record-10-6-2018_4-19-34.mp3",
-          "cover_art_url": "./podcastex.jpg"
-        },
+<!--- --->
+    <div class="modal fade" id="modalConfirm" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row mb-3">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <h5 class="modal-title text-center" id="exampleModalLabel">Confirm
+                                </h5>
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="pl-4 pr-4">YThank you for listening to Ben's and Jeevan's The Read Podacast. For completing this podcast, you will receive 50 Kin tokens back!</p>
+                        <form class="form-inline justify-content-center">
+                             <button type="button" class="btn btn-success text-center"
+                                     data-dismiss="modal" style="width: 100px;">Play</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      ]
-    });
+    <div class = "popup" id ="modal">
+      <div class = "modalTitle" id ="modalTitle">Test </div>
+      <div class = "line" id = "line"></div>
+      <div class = "kinBack" id = "kinBack">
+        Thank you for listening to Ben's and Jeevan's The Read Podacast.
+        For completing this podcast, you will receive 50 Kin tokens back!
+      </div>
+
+      <button id = "kinTokens" class = "kinTokens"> 50 Kin </button>
+    </div>
+<!--- --->
+
+  </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript">
+      let modal = document.getElementById("modal");
+      let main = document.getElementById("mainbody");
+      let line = document.getElementById("line");
+      let marginTitle = document.getElementById("modalTitle");
+      let kinBack = document.getElementById("kinBack");
+      let kinTokens = document.getElementById("kinTokens");
+
+      Amplitude.init({
+        "songs": [
+          {
+            "name": "The Read: Journey to Entreprenuership",
+            "artist": "Ben and Jeevan",
+            "album": "We Are to Answer",
+            "url": "./record-10-6-2018_4-19-34.mp3",
+            "cover_art_url": "./podcastex.jpg"
+          },
+
+        ],
+
+      });
+
+
+      let playbutton = document.getElementById("playlist-play-pause");
+
+      function checkTime(e) {
+        Amplitude.audio().ontimeupdate = function () {songEnded(Amplitude.getSongPlayedSeconds())};
+      }
+
+      function songEnded(songPlayed) {
+        if (songPlayed === Amplitude.getSongDuration()) {
+          console.log("song ended")
+          jQuery('#modalConfirm').modal('show');
+   //       main.style.opacity  = 0.4;
+     //     line.style.display = "block"
+      //    marginTitle.style.display= "block"
+       //   kinTokens.style.display = "block"
+        //  kinBack.style.display = "block"
+         // modal.style.display = "block"
+        }
+      }
+
   </script>
 </html>
