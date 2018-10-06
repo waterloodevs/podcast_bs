@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
 
     <!--Bootstrap core CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <!--fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900"
+          rel="stylesheet">
 
     <script src="index.js"></script>
 
@@ -20,16 +23,85 @@
 </head>
 <body>
 
-    <!--Bootstrap core JavaScript-->
-    <!--Placed at the end of the page so that the pages load faster-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+<!--Content of the page-->
+<div class="container h-100">
+
+    <nav class="navbar navbar-xl navbar-light pl-3 pr-3 ml-0">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" width="50" alt="Logo">
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-right" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wallet.html">Settings</a>
+                </li>
+
+            </ul>
+            <!--<form class="form-inline my-2 my-md-0">-->
+            <!--<input class="form-control" type="text" placeholder="Search" aria-label="Search">-->
+            <!--</form>-->
+        </div>
+    </nav>
+
+    <div class="row ml-0 mr-0 h-100 mb-3">
+        <div class="col-sm-12 mt-3 mb-3 rounded text-center">
+            <h3 style="font-size: 30px">Your balance: </h3>
+            <h1 style="font-size: 40px">500 Kin</h1>
+        </div>
+    </div>
+
+
+    <div class="row ml-0 mr-0 align-items-center h-100 mb-3">
+            <div class="col-6 mt-3 mb-3 rounded">
+                <a href="episodes.html">
+                    <img class="w-100 img-fluid mx-auto d-block" src="images/c1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-6 rounded mt-3 mb-3">
+                <img class="w-100 img-fluid mx-auto d-block" src="images/c2.jpg" alt="">
+            </div>
+        </div>
+
+
+    <div class="row ml-0 mr-0 align-items-center h-100 mb-3">
+            <div class="col-6 mt-3 mb-3 rounded">
+                <img class="w-100 img-fluid mx-auto d-block" src="images/c3.jpg" alt="">
+            </div>
+            <div class="col-6 rounded mt-3 mb-3">
+                <img class="w-100 img-fluid mx-auto d-block" src="images/c4.jpg" alt="">
+            </div>
+        </div>
+
+    <div class="row ml-0 mr-0 align-items-center h-100 mb-3">
+            <div class="col-6 mt-3 mb-3 rounded">
+                <img class="w-100 img-fluid mx-auto d-block" src="images/c5.png" alt="">
+            </div>
+            <div class="col-6 rounded mt-3 mb-3">
+                <img class="w-100 img-fluid mx-auto d-block" src="images/c6.png" alt="">
+            </div>
+        </div>
+
+</div>
+
+<!--Bootstrap core JavaScript-->
+<!--Placed at the end of the page so that the pages load faster-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 </html>
