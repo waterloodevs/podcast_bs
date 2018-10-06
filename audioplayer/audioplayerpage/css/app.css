@@ -575,6 +575,57 @@ div.song-to-add a.add-to-playlist-button {
   font-weight: bold;
 }
 
+.mainbody {
+  z-index:1;
+}
+
+.popup {
+  display: none;
+  position:absolute;
+    top:30%;
+    left:38%;
+    width:600px;
+    height:506px;
+    margin-top:-263px;
+    margin-left:-200px;
+    background-color:#fff;
+    z-index:2;
+    padding:5px;
+    border-radius: 10%;
+  }
+
+.line {
+  display: none;
+  border: solid;
+  width:100%;
+  margin-top:3%;
+
+}
+
+.modalTitle {
+  display: none;
+  margin-top: 4%;
+  margin-left: 10%;
+  font-size: 40px;
+}
+
+.kinBack {
+  display: none;
+  margin-left: 10%;
+  font-size: 35px;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.kinTokens {
+  display: none;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  font-size: 50px;
+  margin-top: 3%;
+  background-color: green;
+}
 /*
   3. Layout
 */
