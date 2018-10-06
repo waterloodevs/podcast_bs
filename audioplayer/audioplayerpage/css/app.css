@@ -4,6 +4,10 @@
 /*
   2. Components
 */
+.modal-lg {
+    max-width: 94% !important;
+}
+
 div#white-player {
   width: 100%;
   max-width: 375px;
