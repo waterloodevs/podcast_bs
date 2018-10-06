@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900');
+
+
+.container {
+    max-width: 1000px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.nav-item{
+    text-align: right;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+
+
+.mainheading {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: "#4c4b4b"
+}
+
+.subheading {
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    font-size: 35px;
+    color: "#4c4b4b"
+}
+
+.heading {
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    font-size: 20px;
+    color: "#4c4b4b"
+}
+
+.questions {
+    font-family: 'Nunito', sans-serif;
+    font-weight:400;
+    font-size: 16px;
+    color: "#4c4b4b"
+}
+
+
+hr {
+
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+lock {
+    width: 50px;
+}
+
+.bgimg {
+    background-image: url('credit-card.png');
+}
